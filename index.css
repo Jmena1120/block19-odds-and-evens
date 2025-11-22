@@ -1,0 +1,84 @@
+/* Base Styles */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+#app {
+  width: 600px;
+  margin-top: 40px;
+  padding: 20px 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Headings */
+h3 {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Input and Buttons */
+input[type="number"] {
+  padding: 6px 10px;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 120px;
+}
+
+button {
+  padding: 6px 12px;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  margin-left: 6px;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Number lists */
+div > div {
+  padding: 10px 0;
+  min-height: 24px;
+  color: #555;
+}
+
+/* Sections spacing */
+div {
+  margin-bottom: 20px;
+}
+
+/* Optional: Flex layout for categories */
+#app > div:nth-child(n+2) {
+  display: flex;
+  justify-content: space-between;
+}
+
+#app > div:nth-child(n+2) > div {
+  flex: 1;
+  margin-right: 20px;
+}
+
+#app > div:nth-child(n+2) > div:last-child {
+  margin-right: 0;
+}
+
+/* Empty number display */
+div div:empty::before {
+  content: "(empty)";
+  font-style: italic;
+  color: #aaa;
+}
